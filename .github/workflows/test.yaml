@@ -1,0 +1,16 @@
+name: hi
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  print_Hi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print Hi
+        uses: actions/setup-python@v5
