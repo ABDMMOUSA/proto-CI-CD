@@ -1,0 +1,14 @@
+name: hi.yaml
+
+on:
+  pull_request:
+    braches:
+    -main
+  jobs:
+    print_Hi:
+      runs-on: ubentu.latest
+    steps:
+    uses: actions/cheakout@4
+      run: |
+echo "hi"
+  
