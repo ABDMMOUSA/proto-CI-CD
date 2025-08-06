@@ -1,14 +1,16 @@
-name: hi.yaml
+name: hi
 
 on:
   pull_request:
-    braches:
-    -main
+    branches:
+      - main
+
 jobs:
   print_Hi:
-    runs-on: ubentu.latest
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/cheakout@v4
-        run: |
-         echo "hi"
-  
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print Hi
+        run: echo "hi"
